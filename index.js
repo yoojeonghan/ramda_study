@@ -494,3 +494,58 @@ console.log(`42-2 :`, R.map(R.apply(useWith2), R.toPairs(useWithTestObj)));
  * c가 a와 b의 범위를 넘어가면 a 또는 b를, 그렇지 않으면 c를 반환한다.
  */
 
+const clamp = R.clamp(1,2,3);
+console.log(`43-1 :`, clamp);
+
+const clamp2 = R.clamp(1,10,3);
+console.log(`43-2 :`, clamp2);
+
+/**
+ * 44. invoker(a,b)(c,d,e...)(f)
+ * f 클래스 내부의 b 이름의 함수를 호출한다. 매개변수의 개수는 a개이며, c,d,e...는 매개변수이다.
+ */
+
+class invokerClass {
+    testfunc1(c) {
+        return 'testfunc1-' + c;
+    }
+    testfunc2(c,d,e) {
+        return 'testfunc2-' + c + d + e;
+    }
+}
+
+const invokertestObj = new invokerClass();
+console.log(`44-1 :`, R.invoker(1, 'testfunc1')(1)(invokertestObj));
+console.log(`44-2 :`, R.invoker(3, 'testfunc2')(1,2,3)(invokertestObj));
+
+/**
+ * 45. isNil
+ * 
+ */
+
+/**
+ * 46. path
+ * 
+ */
+
+/**
+ * split
+ * it
+ * defaultTo
+ * inc
+ * forEachObjindexed
+ * add
+ * clone
+ * isEmpty
+ * pickAll
+ * view
+ * substract
+ * divide
+ * flatten
+ * of
+ * values,
+ * mapObjIndexed
+ * both
+ * is
+ * 
+ */
