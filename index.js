@@ -486,7 +486,7 @@ const useWith = R.useWith(R.mergeLeft, [R.objOf('number'), R.objOf('type')]);
 console.log(`42-1 :`, useWith(1, 2));
 
 const useWithTestObj = { 1:2, 3:4, 5:6, 7:8 };
-const useWith2 = R.curry(R.useWith(R.mergeLeft, [R.objOf('number'), R.objOf('type')]));
+const useWith2 = R.useWith(R.mergeLeft, [R.objOf('number'), R.objOf('type')]);
 console.log(`42-2 :`, R.map(R.apply(useWith2), R.toPairs(useWithTestObj)));
 
 /**
